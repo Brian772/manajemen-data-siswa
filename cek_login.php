@@ -9,6 +9,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM pengguna WHERE username='$usernam
   $cek = mysqli_num_rows($query);
 
   if($cek > 0){
+    session_start();
     $_SESSION['login'] = true;
     $_SESSION['user'] = $username;
     header("location:home.php");
