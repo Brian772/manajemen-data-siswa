@@ -10,14 +10,17 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Halaman Home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js"></script>
+  <title>Halaman Home</title>
 </head>
 <body>
     <?php include "navigasi.php"; ?>
     <div id="main">
-        <div>
+        <div class="container">
             <h2>APLIKASI MANAJEMEN DATA SISWA</H2>
             <hr>
             <p>Selamat datang di aplikasi Data Siswa SMK PGRI 3 Malang</p>

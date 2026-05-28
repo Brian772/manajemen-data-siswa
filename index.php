@@ -13,17 +13,19 @@
 </head>
 <body>
   <div class="container">
-    <h1>PANEL LOGIN</h1>
+    <h2>PANEL LOGIN</h2>
     <hr>
     <form action="cek_login.php" method="post">
-      <div class="form-control">
+      <div class="form-group">
+        <label>Username :</label>
         <input type="text" name="username" placeholder="Masukkan username">
       </div>
-      <div class="form-control">
+      <div class="form-group">
+        <label>Password :</label>
         <input type="password" name="pass" placeholder="Masukkan password">
       </div>
-      <div class="form-control">
-        <button type="submit">LOGIN</button>
+      <div class="btn-group">
+        <button type="submit" class="submit">LOGIN</button>
       </div>
     </form>
   </div>

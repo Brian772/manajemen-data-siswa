@@ -4,10 +4,15 @@ body {
   margin: 0;
 }
 
+#main {
+  transition: margin-left 0.3s;
+}
+
 .navbar {
   background-color: #1F4E79;
   height: 60px;
   display: flex;
+  border-radius: 0 0 8px 8px;
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
@@ -52,6 +57,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
+  border-radius: 0 8px 8px 0;
   background-color: #163d5c;
   overflow-x: hidden;
   transition: 0.3s;
@@ -60,14 +66,20 @@ body {
 
 .side-nav a {
   padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 18px;
   color: white;
   display: block;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(0px);
 }
 
 .side-nav a:hover {
   background-color: #285b86;
+  margin-right: 10px;
+  transform: translateX(5px);
+  
 }
 
 .btn-close {
@@ -105,12 +117,11 @@ hr {
 }
 
 .submit {
-  width: 100%;
-  padding: 10px;
+  padding: 10px 30px;
   background-color: #1F4E79;
   color: white;
   border: none;
-  border-radius: 16px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -118,13 +129,83 @@ hr {
   background-color: #163d5c;
 }
 
-.tambah {
-  background-color: #4CAF50;
-  border: none;
+.cancel {
+  padding: 6px 20px;
+  background-color: #bbb;
+  text-decoration: none;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cancel:hover {
+  background-color: #999;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  background-color: #1F4E79;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  padding: 7px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.edit-btn:hover {
+  background-color: #163d5c;
+  color: white;
+}
+
+.hapus-btn {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #bb0000;
+  padding: 7px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.hapus-btn:hover {
+  background-color: #bb0000;
+  color: white;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.tambah {
+  background-color: white;
+  border: 1px solid #45a050;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1a4f20;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.tambah:hover {
+  background-color: #45a049;
+  color: white;
 }
 
 table {
@@ -140,5 +221,5 @@ th {
 
 th, td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #bbbbbb;
 }

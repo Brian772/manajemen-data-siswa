@@ -10,7 +10,7 @@
   if ($koneksi) {
     $pilih_db = mysqli_select_db($koneksi, $database);
     if ($pilih_db) {
-      echo "databases terpilih!";
+      //echo "databases terpilih!";
     } 
   } else {
     echo "koneksi gagal, silahkan coba lagi";
