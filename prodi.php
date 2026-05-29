@@ -22,6 +22,7 @@
 <body>
   <?php include "navigasi.php"; ?>
   <div id="main">
+    <?php if ($_GET['status'] === 'success') echo 'Data berhasil disimpan!'; ?>
     <div class="container">
       <h2>Data Prodi</h2>
       <hr>
