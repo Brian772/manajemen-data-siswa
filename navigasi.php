@@ -6,10 +6,12 @@
         <li><a href="home.php">Home</a></li>
         <li><a href="siswa.php">Siswa</a></li>
         <li><a href="prodi.php">Prodi</a></li>
+        <li class="logout">
+          <a href="logout.php">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </li>
       </ul>
-			<div class="navbar-nav">
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
-			</div>
 </nav>
 
 <div id="side-menu" class="side-nav">
