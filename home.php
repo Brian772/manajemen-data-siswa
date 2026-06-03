@@ -47,6 +47,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
         </div>
       </div>
     </div>
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
   </div>
 </body>
 </html>

@@ -403,3 +403,32 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
   background-color: #163d5c;
 }
+
+.orb-1 {
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#1F4E79, transparent);
+  top: -50px;
+  left: -50px;
+}
+.orb-2 {
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(#1F4E79, transparent);
+  bottom: 0;
+  right: 0;
+}
+.orb-1, .orb-2 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
