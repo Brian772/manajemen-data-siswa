@@ -30,7 +30,7 @@ if (isset($_GET['cari'])) {
 <body>
   <?php include "navigasi.php"; ?>
   <div id="main">
-    <div class="container-main">
+    <div class="container container-siswa">
       <h2>Data Siswa</h2>
       <hr>
       <div class="header-action">
