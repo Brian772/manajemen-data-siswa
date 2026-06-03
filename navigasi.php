@@ -16,8 +16,8 @@
 
 <div id="side-menu" class="side-nav">
   <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-  <a href="home.php">Home</a>
-  <a href="siswa.php">Siswa</a>
-  <a href="prodi.php">Prodi</a>
-  <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  <a href="home.php" class="btn-list">Home</a>
+  <a href="siswa.php" class="btn-list">Siswa</a>
+  <a href="prodi.php" class="btn-list">Prodi</a>
+  <a href="logout.php" class="btn-list"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
