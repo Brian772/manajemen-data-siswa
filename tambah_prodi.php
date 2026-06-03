@@ -31,7 +31,7 @@
     if($valid) {
       $query = "INSERT INTO prodi (kd_prodi, nama_prodi) VALUES ('$kd_prodi', '$nama_prodi')";
       if (mysqli_query($koneksi, $query)) {
-        header("location: prodi.php");
+        header("location: prodi.php?success=tambah");
         exit();
       } else {
         $error = "Error: " . mysqli_error($koneksi);

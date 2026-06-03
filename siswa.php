@@ -33,6 +33,19 @@ if (isset($_GET['cari'])) {
     <div class="container container-siswa">
       <h2>Data Siswa</h2>
       <hr>
+
+      <?php
+        if (isset($_GET['success'])) {
+            if ($_GET['success'] == 'tambah') {
+                echo "<p style='color:green;'> Data berhasil di tambahkan!</p>";
+            }
+
+            if ($_GET['success'] == 'edit') {
+                echo "<p style='color:green;'>Data berhasil diubah!</p>";
+            }
+        }
+        ?>
+
       <div class="header-action">
         <a href="tambah_siswa.php" class="tambah">Tambah Data Siswa</a>
 

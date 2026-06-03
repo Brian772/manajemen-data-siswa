@@ -33,6 +33,19 @@ if (isset($_GET['cari'])) {
     <div class="container container-main">
       <h2>Data Prodi</h2>
       <hr>
+
+      <?php
+        if (isset($_GET['success'])) {
+            if ($_GET['success'] == 'tambah') {
+                echo "<p style='color:green; font-weight: bold;'> Data berhasil di tambahkan!</p>";
+            }
+
+            if ($_GET['success'] == 'edit') {
+                echo "<p style='color:green; font-weight: bold;'>Data berhasil diubah!</p>";
+            }
+        }
+        ?>
+
       <div class="header-action">
         <a href="tambah_prodi.php" class="tambah">Tambah Data Prodi</a>
         <form method="GET" action="prodi.php" class="form-cari">

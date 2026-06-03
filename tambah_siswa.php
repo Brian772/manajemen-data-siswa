@@ -75,8 +75,8 @@ if (isset($_POST['simpan'])) {
 		
 		$query = "INSERT INTO siswa (nis, nama, kelas, tahun_ajaran, kd_prodi, jenis_kelamin, foto) VALUES ('$nis', '$nama', '$kelas', '$tahun_ajaran', '$kd_prodi', '$jk', '$foto')";
 		if (mysqli_query($koneksi, $query)) {
-			header("location: siswa.php");
-			exit();
+			header("location: siswa.php?success=tambah");
+        	exit();
 		} else {
 			echo "Error: " . mysqli_error($koneksi);
 		}

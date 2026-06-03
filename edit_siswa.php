@@ -30,7 +30,7 @@ if (isset($_POST['update'])) {
     jenis_kelamin='$jk' 
     WHERE id='$id'");
 
-  header("location: siswa.php");
+  header("location: siswa.php?success=edit");
   exit();
 }
 ?>

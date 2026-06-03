@@ -11,7 +11,7 @@
     $nama_prodi = $_POST['nama_prodi'];
 
     mysqli_query($koneksi, "UPDATE prodi SET kd_prodi='$kd_prodi', nama_prodi='$nama_prodi' WHERE id_prodi='$id_prodi'");
-    header("Location: prodi.php");
+    header("location: siswa.php?success=edit");
     exit();
   }
 ?>
