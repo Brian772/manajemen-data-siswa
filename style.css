@@ -115,8 +115,8 @@ body {
 }
 
 .container-main {
-  width: 70%;
-  max-width: 1200px;
+  width: 85%;
+  max-width: 2000px;
   margin: 40px auto;
   background-color: white;
   border: 1px solid #ddd;
@@ -269,6 +269,10 @@ tr:nth-child(even) {
   background-color: #efefef;
 }
 
+.tabel-siswa th:nth-child(1),
+.tabel-siswa td:nth-child(1) {
+  text-align: center;
+}
 .tabel-siswa th:nth-child(7),
 .tabel-siswa td:nth-child(7) {
   text-align: center;
