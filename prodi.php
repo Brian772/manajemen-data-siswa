@@ -35,16 +35,35 @@ if (isset($_GET['cari'])) {
       <hr>
 
       <?php
-        if (isset($_GET['success'])) {
-            if ($_GET['success'] == 'tambah') {
-                echo "<p style='color:green; font-weight: bold;'> Data berhasil di tambahkan!</p>";
-            }
-
-            if ($_GET['success'] == 'edit') {
-                echo "<p style='color:green; font-weight: bold;'>Data berhasil diubah!</p>";
-            }
+      if (isset($_GET['success'])) {
+        if ($_GET['success'] == 'tambah') {
+      ?>
+          <p class="success"> Data berhasil di tambahkan!</p>
+        <?php
         }
+
+        if ($_GET['success'] == 'edit') {
         ?>
+          <p class="success">Data berhasil diubah!</p>
+        <?php
+        }
+
+        if ($_GET['success'] == 'hapus') {
+        ?>
+          <p class="success">Data berhasil dihapus!</p>
+      <?php
+        }
+      }
+      ?>
+      <script>
+        setTimeout(function() {
+          var successMessage = document.querySelector(".success");
+          if (successMessage) {
+            successMessage.style.display = "none";
+            window.history.replaceState({}, document.title, "prodi.php");
+          }
+        }, 3000);
+      </script>
 
       <div class="header-action">
         <a href="tambah_prodi.php" class="tambah">Tambah Data Prodi</a>

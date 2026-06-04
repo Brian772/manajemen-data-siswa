@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
@@ -14,9 +14,12 @@ body {
 }
 
 .navbar {
-  background-color: #1F4E79;
+  background-color: #1f4e79;
   height: 60px;
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   border-radius: 0 0 8px 8px;
   align-items: center;
   justify-content: space-between;
@@ -59,7 +62,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   border-radius: 0 8px 8px 0;
@@ -70,7 +73,7 @@ body {
 }
 
 .side-nav a {
-  padding: 12px 25px;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 18px;
@@ -98,6 +101,20 @@ body {
   top: 10px;
   right: 20px;
   font-size: 30px;
+}
+.btn-logout {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.btn-logout:hover {
+  color: #d10e0e;
 }
 
 .container {
@@ -430,5 +447,38 @@ input[type="file"]::file-selector-button:hover {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+.success {
+  color: #45a049;
+  font-weight: 400;
+  font-size: 16px !important;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 24px;
+  text-align: left !important;
+  border-radius: 8px;
+  background-color: #45a0503d;
+  border: 1px solid #45a049;
+  margin-bottom: 32px;
+}
+.success::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #1F4E79;
+  animation: success 3s linear forwards;
+}
+@keyframes success {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
   }
 }
