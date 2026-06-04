@@ -9,10 +9,12 @@
 
   $cek = mysqli_query($koneksi, "SELECT * FROM siswa WHERE kd_prodi='$kd_prodi'");
   if (mysqli_num_rows($cek) > 0) {
-    header("Location: prodi.php?p=Data Prodi tidak bisa dihapus karena masih digunakan!");
+    header("Location: prodi.php?warning=prodiHapus");
+    exit();
   } else {
     mysqli_query($koneksi, "DELETE FROM prodi WHERE id_prodi='$id_prodi'");
-    header("Location: prodi.php");
-    }
+    header("Location: prodi.php?success=hapus");
+    exit();
+  }
   exit();
 ?>

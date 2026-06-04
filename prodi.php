@@ -38,28 +38,39 @@ if (isset($_GET['cari'])) {
       if (isset($_GET['success'])) {
         if ($_GET['success'] == 'tambah') {
       ?>
-          <p class="success"> Data berhasil di tambahkan!</p>
+          <p class="success"><i class="fa-regular fa-circle-check"></i>Data berhasil di tambahkan!</p>
         <?php
         }
 
         if ($_GET['success'] == 'edit') {
         ?>
-          <p class="success">Data berhasil diubah!</p>
+          <p class="success"><i class="fa-regular fa-circle-check"></i>Data berhasil diubah!</p>
         <?php
         }
 
         if ($_GET['success'] == 'hapus') {
         ?>
-          <p class="success">Data berhasil dihapus!</p>
-      <?php
+          <p class="success"><i class="fa-regular fa-circle-check"></i>Data berhasil dihapus!</p>
+        <?php
         }
+      }
+
+      if (isset($_GET['warning']) && $_GET['warning'] == 'prodiHapus') {
+        ?>
+        <p class="warning"><i class="fa-solid fa-triangle-exclamation"></i>Data Prodi tidak bisa dihapus karena masih digunakan!</p>
+      <?php
       }
       ?>
       <script>
         setTimeout(function() {
           var successMessage = document.querySelector(".success");
+          var warningMessage = document.querySelector(".warning");
           if (successMessage) {
             successMessage.style.display = "none";
+            window.history.replaceState({}, document.title, "prodi.php");
+          }
+          if (warningMessage) {
+            warningMessage.style.display = "none";
             window.history.replaceState({}, document.title, "prodi.php");
           }
         }, 3000);

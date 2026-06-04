@@ -276,7 +276,7 @@ th, td {
 }
 
 tr:nth-child(even) {
-  background-color: #efefef;
+  background-color: #f1f1f1;
 }
 
 .tabel-siswa th:nth-child(1),
@@ -420,6 +420,19 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
   background-color: #163d5c;
 }
+.form-profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
 .orb-1 {
   width: 200px;
@@ -438,7 +451,7 @@ input[type="file"]::file-selector-button:hover {
 .orb-1, .orb-2 {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.3;
   animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
@@ -472,9 +485,33 @@ input[type="file"]::file-selector-button:hover {
   height: 4px;
   border-radius: 8px;
   background-color: #1F4E79;
-  animation: success 3s linear forwards;
+  animation: progress 3s linear forwards;
 }
-@keyframes success {
+.warning {
+  color: #f5b400;
+  font-weight: 400;
+  font-size: 16px !important;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 24px;
+  text-align: left !important;
+  border-radius: 8px;
+  background-color: #f5b4003d;
+  border: 1px solid #f5b400;
+  margin-bottom: 32px;
+}
+.warning::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 8px;
+  background-color: #1F4E79;
+  animation: progress 3s linear forwards;
+}
+@keyframes progress {
   0% {
     width: 100%;
   }

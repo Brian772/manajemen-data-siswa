@@ -152,7 +152,7 @@ if (isset($_POST['simpan'])) {
 					<span class="error"><?php echo htmlspecialchars($jkErr); ?></span>
 				</div>
 
-				<div class="form-group">
+				<div class="form-profil">
 					<label>Foto (opsional)</label>
 					<input type="file" name="foto" accept="image/*" style="margin: 12px 0 32px 0;">
 				</div>

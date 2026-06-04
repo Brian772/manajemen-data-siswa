@@ -21,13 +21,24 @@ if (isset($_POST['update'])) {
   $kd_prodi = $_POST['kd_prodi'];
   $jk = $_POST['jenis_kelamin'];
 
+  $foto = $_FILES['foto']['name'];
+  $tmp = $_FILES['foto']['tmp_name'];
+  if (!empty($foto)) {
+    $foto_baru = date('dmYHis') . '_' . $foto;
+    move_uploaded_file($tmp, "img/" . $foto_baru);
+    $foto = $foto_baru;
+  } else {
+    $foto = $data['foto'];
+  }
+
   mysqli_query($koneksi, "UPDATE siswa SET 
     nis='$nis', 
     nama='$nama', 
     kelas='$kelas', 
     tahun_ajaran='$tahun_ajaran', 
     kd_prodi='$kd_prodi', 
-    jenis_kelamin='$jk' 
+    jenis_kelamin='$jk',
+    foto='$foto'
     WHERE id='$id'");
 
   header("location: siswa.php?success=edit");
@@ -52,7 +63,7 @@ if (isset($_POST['update'])) {
     <div class="container">
       <h2>Edit Data Siswa</h2>
       <hr>
-      <form method="POST">
+      <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label>NIS</label>
           <input type="text" name="nis" value="<?php echo $data['nis']; ?>" required>
@@ -101,6 +112,30 @@ if (isset($_POST['update'])) {
               <input type="radio" name="jenis_kelamin" value="P" <?php if ($data['jenis_kelamin'] == 'P') echo "checked"; ?>> Perempuan
             </label>
           </div>
+        </div>
+
+        <div class="form-profil">
+          <label>Foto (opsional)</label><br>
+          <div class="profil">
+            <?php if (!empty($data['foto'])) { ?>
+              <img src="img/<?php echo $data['foto']; ?>" id="preview" class="foto-profil" alt="Foto">
+            <?php } else { ?>
+              <img src="" id="preview" class="foto-profil" style="display: none;" alt="Preview Foto">
+            <?php } ?>
+            <input type="file" name="foto" id="input-foto" accept="image/*" onchange="previewFoto()">
+          </div>
+          <script>
+            function previewFoto() {
+              const input = document.getElementById('input-foto');
+              const preview = document.getElementById('preview');
+
+              if (input.files && input.files[0]) {
+                const fileURL = URL.createObjectURL(input.files[0]);
+                preview.src = fileURL;
+                preview.style.display = 'block';
+              }
+            }
+          </script>
         </div>
 
         <br>

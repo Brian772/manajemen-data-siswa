@@ -104,8 +104,8 @@ if (isset($_GET['cari'])) {
               <td><?php echo $row['jenis_kelamin']; ?></td>
               <td>
                 <div class="btn-group">
-                  <a href="edit_siswa.php?id=<?php echo $row['id']; ?>" class="edit-btn">Edit</a>
-                  <a href="hapus_siswa.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin hapus?')" class="hapus-btn">Delete</a>
+                  <a href="edit_siswa.php?id=<?php echo $row['id']; ?>" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                  <a href="hapus_siswa.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin hapus?')" class="hapus-btn"><i class="fa-solid fa-trash-alt"></i>Delete</a>
                 </div>
               </td>
             </tr>
